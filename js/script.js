@@ -1,4 +1,20 @@
 "use strict";
+// import { Player } from './player.js';
+// import { Point } from './Point.js';
+class Point {
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+    }
+}
+class Player {
+    constructor(location, name, color, score = 0) {
+        this.location = location;
+        this.name = name;
+        this.color = color;
+        this.score = score;
+    }
+}
 //globale variable here
 let canvas;
 let screenWidth = 200;
@@ -19,8 +35,7 @@ let context;
 //functions
 function init() {
     handleResize();
-    context.fillStyle = "black";
-    context.fillRect(0, 0, 50, 50);
+    startGame();
 }
 function handleResize() {
     screenWidth = document.documentElement.clientWidth;
@@ -31,3 +46,7 @@ function handleResize() {
     console.log(canvas.height);
 }
 addEventListener("resize", handleResize);
+function startGame() {
+    let player = new Player(new Point(0, 0), "Player1", "red");
+    console.log(player);
+}

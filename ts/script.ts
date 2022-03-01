@@ -1,3 +1,23 @@
+// import { Player } from './player.js';
+// import { Point } from './Point.js';
+
+
+class Point {
+    constructor(
+        public x: number,
+        public y: number,
+    ){}
+}
+class Player{
+    constructor(
+        public location: Point,
+        public name: string,
+        public color: string,
+        public score: number = 0
+    ) {
+    }
+}
+
 //globale variable here
 let canvas: HTMLCanvasElement;
 let screenWidth = 200;
@@ -19,8 +39,7 @@ let context: CanvasRenderingContext2D;
 //functions
 function init(): void {
     handleResize();
-    context.fillStyle = "black";
-    context.fillRect(0,0,50,50);
+    startGame();
 }
 
 
@@ -34,3 +53,8 @@ function handleResize(): void {
 }
 
 addEventListener("resize", handleResize);
+
+function startGame(): void {
+    let player = new Player(new Point(0, 0), "Player1", "red");
+    console.log(player);
+}
