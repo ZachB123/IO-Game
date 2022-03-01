@@ -1,6 +1,5 @@
 "use strict";
-// import { Player } from './player.js';
-// import { Point } from './Point.js';
+//Classes
 class Point {
     constructor(x, y) {
         this.x = x;

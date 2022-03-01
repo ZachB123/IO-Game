@@ -57,3 +57,13 @@ function startGame(): void {
     let player = new Player(new Point(0, 0), "Player1", "red");
     console.log(player);
 }
+
+let fillTriangle = (x: number, y: number, width: number, height: number, color: string): void => {
+    context.fillStyle = color;
+    context.beginPath();
+    context.moveTo(x, y);
+    context.lineTo(x + width, y);
+    context.lineTo(x + width / 2, y + height);
+    context.closePath();
+    context.fill();
+}
