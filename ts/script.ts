@@ -1,13 +1,12 @@
-// import { Player } from './player.js';
-// import { Point } from './Point.js';
 
-
+//Classes
 class Point {
     constructor(
         public x: number,
         public y: number,
     ){}
 }
+
 class Player{
     constructor(
         public location: Point,
