@@ -1,2 +1,2 @@
 # IO-Game
-Zach and Ayman's
+Zach and Ayman's .io game
