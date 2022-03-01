@@ -23,6 +23,7 @@ function init(): void {
     context.fillRect(0,0,50,50);
 }
 
+
 function handleResize(): void {
     screenWidth = document.documentElement.clientWidth;
     screenHeight = document.documentElement.clientHeight;
