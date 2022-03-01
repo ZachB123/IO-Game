@@ -1,18 +1,22 @@
-
+//globale variable here
 let canvas: HTMLCanvasElement;
 let screenWidth = 200;
 let screenHeight = 200;
+let context;
 
+//init
 {
     let tempCanvas: HTMLCanvasElement | null = document.querySelector("#game");
     if(tempCanvas !== null) {
         canvas = tempCanvas;
+        context = canvas.getContext("2d");
         init();
     } else {
         alert("Need to enable JavaScript or something else has gone wrong");
     }
 }
 
+//functions
 function init(): void {
     handleResize();
 }
@@ -27,3 +31,4 @@ function handleResize(): void {
 }
 
 addEventListener("resize", handleResize);
+
