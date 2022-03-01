@@ -1,5 +1,7 @@
 
 let canvas: HTMLCanvasElement;
+let screenWidth = 200;
+let screenHeight = 200;
 
 {
     let tempCanvas: HTMLCanvasElement | null = document.querySelector("#game");
@@ -11,9 +13,6 @@ let canvas: HTMLCanvasElement;
     }
 }
 
-let screenWidth;
-let screenHeight;
-
 function init(): void {
     handleResize();
 }
@@ -23,6 +22,8 @@ function handleResize(): void {
     screenHeight = document.documentElement.clientHeight;
     canvas.width = screenWidth;
     canvas.height = screenHeight;
+    console.log(canvas.width);
+    console.log(canvas.height);
 }
 
 addEventListener("resize", handleResize);

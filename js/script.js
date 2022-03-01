@@ -1,5 +1,7 @@
 "use strict";
 let canvas;
+let screenWidth = 200;
+let screenHeight = 200;
 {
     let tempCanvas = document.querySelector("#game");
     if (tempCanvas !== null) {
@@ -10,8 +12,6 @@ let canvas;
         alert("Need to enable JavaScript or something else has gone wrong");
     }
 }
-let screenWidth;
-let screenHeight;
 function init() {
     handleResize();
 }
@@ -20,5 +20,7 @@ function handleResize() {
     screenHeight = document.documentElement.clientHeight;
     canvas.width = screenWidth;
     canvas.height = screenHeight;
+    console.log(canvas.width);
+    console.log(canvas.height);
 }
 addEventListener("resize", handleResize);
